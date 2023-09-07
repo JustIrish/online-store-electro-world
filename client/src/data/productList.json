@@ -1,0 +1,82 @@
+[
+  {
+    "id": "id-1",
+    "name": "Блендер Scarlet",
+    "description": "",
+    "old-price": "1.920",
+    "price": "1.760",
+    "novelty": "true",
+    "promotion": "20",
+    "picture": "images/blender.png"
+  },
+  {
+    "id": "id-2",
+    "name": "Чайник Scarlet",
+    "description": "",
+    "old-price": "",
+    "price": "1.590",
+    "novelty": "false",
+    "promotion": "",
+    "picture": "images/kettle-scarlett.png"
+  },
+  {
+    "id": "id-3",
+    "name": "Тостер Scarlet",
+    "description": "",
+    "old-price": "",
+    "price": "1.120",
+    "novelty": "false",
+    "promotion": "",
+    "picture": "images/toaster.png"
+  },
+  {
+    "id": "id-4",
+    "name": "Міксер Scarlet",
+    "description": "",
+    "old-price": "",
+    "price": "1.860",
+    "novelty": "false",
+    "promotion": "",
+    "picture": "images/mixer.png"
+  },
+  {
+    "id": "id-5",
+    "name": "Cоковижималка Scarlet",
+    "description": "",
+    "old-price": "",
+    "price": "2.140",
+    "novelty": "false",
+    "promotion": "",
+    "picture": "images/juicer.png"
+  },
+  {
+    "id": "id-6",
+    "name": "Кавомолка Scarlet",
+    "description": "",
+    "old-price": "",
+    "price": "1.120",
+    "novelty": "false",
+    "promotion": "20",
+    "picture": "images/coffee-grinder.png"
+  },
+  {
+    "id": "id-7",
+    "name": "Кавомашина Scarlet",
+    "description": "",
+    "old-price": "5.920",
+    "price": "4.890",
+    "novelty": "true",
+    "promotion": "20",
+    "picture": "images/coffee-machine-scarlett.png"
+  },
+  {
+    "id": "id-8",
+    "name": "М'ясорубка Scarlet",
+    "description": "",
+    "old-price": "",
+    "price": "2.360",
+    "novelty": "false",
+    "promotion": "",
+    "picture": "images/meat-grinder.png"
+  }
+]
