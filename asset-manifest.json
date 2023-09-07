@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/online-store-electro-world/static/css/main.b5320759.css",
+    "main.js": "/online-store-electro-world/static/js/main.1fd17273.js",
+    "index.html": "/online-store-electro-world/index.html",
+    "main.b5320759.css.map": "/online-store-electro-world/static/css/main.b5320759.css.map",
+    "main.1fd17273.js.map": "/online-store-electro-world/static/js/main.1fd17273.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b5320759.css",
+    "static/js/main.1fd17273.js"
+  ]
+}
