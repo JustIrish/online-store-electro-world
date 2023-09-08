@@ -1,15 +1,15 @@
-import { SvgLogo, LogoLink, DisplayWrap, Wrap } from './Logo.styled';
+import { SvgLogo, LogoLink, DisplayWrap, Box, Wrap } from './Logo.styled';
 
 const Logo = () => {
   return (
-    <div>
-      <LogoLink href="/">
-        <DisplayWrap>
-          {' '}
-          M<SvgLogo />R<Wrap> electro</Wrap>
-        </DisplayWrap>
-      </LogoLink>
-    </div>
+    <LogoLink href="/">
+      <DisplayWrap>
+        <Box>
+          M<SvgLogo />R
+        </Box>
+        <Wrap>electro</Wrap>
+      </DisplayWrap>
+    </LogoLink>
   );
 };
 

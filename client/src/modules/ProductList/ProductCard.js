@@ -1,10 +1,19 @@
-import { ImageWrap, DescWrap, Title, Price } from './ProductList.styled';
+import {
+  Card,
+  ImageWrap,
+  DescWrap,
+  Mark,
+  Title,
+  Price,
+  OldPrice,
+} from './ProductList.styled';
 
 const ProductCard = ({
-  product: { name, price, novelty, promotion, picture },
+  product: { name, price, novelty, promotion, oldPrice, picture },
 }) => {
+  console.log(novelty);
   return (
-    <li>
+    <Card>
       <ImageWrap>
         <img
           src={require(`../../${picture}`)}
@@ -13,13 +22,18 @@ const ProductCard = ({
           height="292"
           loading="lazy"
         />
+        {novelty && <Mark>New</Mark>}
+        {promotion && <Mark>-{promotion}%</Mark>}
       </ImageWrap>
       <DescWrap>
         {' '}
         <Title>{name}</Title>
-        <Price>{price} грн.</Price>
+        <div>
+          {oldPrice && <OldPrice>{oldPrice} грн.</OldPrice>}
+          <Price>{price} грн.</Price>
+        </div>
       </DescWrap>
-    </li>
+    </Card>
   );
 };
 

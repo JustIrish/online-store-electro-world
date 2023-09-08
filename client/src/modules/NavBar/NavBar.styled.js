@@ -16,14 +16,29 @@ export const MenuList = styled.ul`
 `;
 
 export const Link = styled.a`
+  position: relative;
   color: inherit;
   font-size: 20px;
   transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
 
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: ${({ theme: { colors } }) => colors.accent};
+    opacity: 0;
+    transition: opacity 300ms cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
   &:hover,
   &:focus {
     color: ${({ theme: { colors } }) => colors.accent};
-    text-decoration: underline;
+    &::before {
+      opacity: 1;
+    }
   }
 `;
 
