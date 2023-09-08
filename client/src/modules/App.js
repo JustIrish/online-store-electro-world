@@ -1,19 +1,16 @@
 import ProductList from './ProductList/ProductList';
-import { GlobalStyle } from 'styles/GlobalStyle';
-import { Layout, Container } from './Layout.styled';
+import { GlobalStyle } from 'shared/styles/GlobalStyle';
+import { Layout, Header, Container } from './Layout.styled';
 
 import data from 'data/productList.json';
+import NavBar from './NavBar/NavBar';
 
-console.log(data);
 const App = () => {
   return (
     <Layout>
-      <header>
-        <Container>
-          {' '}
-          <div>MIR electro</div>
-        </Container>
-      </header>
+      <Header>
+        <NavBar />
+      </Header>
       <main>
         <Container>
           <ProductList array={data}></ProductList>
