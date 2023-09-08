@@ -9,7 +9,9 @@ const App = () => {
   return (
     <Layout>
       <Header>
-        <NavBar />
+        <Container>
+          <NavBar />
+        </Container>
       </Header>
       <main>
         <Container>

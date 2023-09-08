@@ -1,4 +1,4 @@
-import { ImageWrap } from './ProductList.styled';
+import { ImageWrap, DescWrap, Title, Price } from './ProductList.styled';
 
 const ProductCard = ({
   product: { name, price, novelty, promotion, picture },
@@ -10,11 +10,15 @@ const ProductCard = ({
           src={require(`../../${picture}`)}
           alt={name}
           width="292"
+          height="292"
           loading="lazy"
         />
       </ImageWrap>
-      <p>{name}</p>
-      <p>{price}</p>
+      <DescWrap>
+        {' '}
+        <Title>{name}</Title>
+        <Price>{price} грн.</Price>
+      </DescWrap>
     </li>
   );
 };

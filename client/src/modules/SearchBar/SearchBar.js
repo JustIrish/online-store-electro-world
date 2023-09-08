@@ -1,10 +1,11 @@
-import PropTypes from 'prop-types';
-import { CiSearch } from 'react-icons/ci';
-import toast from 'react-hot-toast';
-import { SearchForm, SearchInput, SearchBtn } from './SearchBar.styled';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
+import { ImSearch } from 'react-icons/im';
 
-export const SearchBar = ({ value, onSubmit }) => {
+import toast from 'react-hot-toast';
+
+import { SearchForm, SearchInput, SearchBtn } from './SearchBar.styled';
+
+const SearchBar = () => {
   const [query, setQuery] = useState('');
 
   const handlerSubmit = evt => {
@@ -12,10 +13,8 @@ export const SearchBar = ({ value, onSubmit }) => {
     if (query.trim() === '') {
       toast.error('Please, enter your query!');
     }
-    onSubmit(query);
+    toast.success(`${query}`);
   };
-
-  useEffect(() => setQuery(value), [value]);
 
   return (
     <SearchForm onSubmit={handlerSubmit}>
@@ -23,16 +22,14 @@ export const SearchBar = ({ value, onSubmit }) => {
         type="text"
         name="input"
         value={query}
+        placeholder="Ваш запит"
         onChange={e => setQuery(e.target.value)}
       />
       <SearchBtn type="submit">
-        <CiSearch size={22} />
+        <ImSearch size={28} color="#98887A" />
       </SearchBtn>
     </SearchForm>
   );
 };
 
-SearchBar.propTypes = {
-  value: PropTypes.string.isRequired,
-  onSubmit: PropTypes.func.isRequired,
-};
+export default SearchBar;

@@ -1,7 +1,14 @@
+import { SvgLogo, LogoLink, DisplayWrap, Wrap } from './Logo.styled';
+
 const Logo = () => {
   return (
     <div>
-      <a href="/">MIR electro</a>
+      <LogoLink href="/">
+        <DisplayWrap>
+          {' '}
+          M<SvgLogo />R<Wrap> electro</Wrap>
+        </DisplayWrap>
+      </LogoLink>
     </div>
   );
 };

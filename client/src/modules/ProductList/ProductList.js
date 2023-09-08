@@ -1,30 +1,38 @@
 import ProductCard from './ProductCard';
 
-import { CardList } from './ProductList.styled';
+import { CardList, ImageStyled, Descr, ItemTitle } from './ProductList.styled';
 
 const ProductList = ({ array = [] }) => {
   return (
     <CardList>
-      <li>
-        <img
+      <li
+        style={{ position: 'relative', gridColumnStart: 1, gridColumnEnd: 3 }}
+      >
+        <ImageStyled
           src={require(`images/kitchen.jpg`)}
           alt="kitchen"
           width="817"
+          height="380"
           loading="lazy"
         />
-        <p>Все для кухні</p>
+        <Descr>Хіти цього року</Descr>
+        <ItemTitle>Все для кухні</ItemTitle>
       </li>
       {array.map(product => (
         <ProductCard key={product.id} product={product}></ProductCard>
       ))}
-      <li>
-        <img
+      <li
+        style={{ position: 'relative', gridColumnStart: 3, gridColumnEnd: 5 }}
+      >
+        <ImageStyled
           src={require(`images/kitchen-appliances-sets.jpg`)}
           alt="kitchen sets"
           width="817"
+          height="380"
           loading="lazy"
         />
-        <p>Набори техніки</p>
+        <Descr>Комплекти</Descr>
+        <ItemTitle>Набори техніки</ItemTitle>
       </li>
     </CardList>
   );

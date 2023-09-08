@@ -3,31 +3,34 @@ import styled from 'styled-components';
 export const SearchForm = styled.form`
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
 `;
 
 export const SearchInput = styled.input`
-  height: 42px;
-  padding: 9px 32px 8px 8px;
-  border-radius: 4px 0px 0px 4px;
-  border: 2px solid #656870;
+  height: 60px;
+  padding: 18px 60px 18px 25px;
+  border-radius: 3px 0px 0px 3px;
+  border: 1px solid #a19c97;
   border-right: 0;
   outline: none;
-  font: inherit;
-  font-size: 18px;
+  color: #b9b6b3;
+  font-size: 20px;
+  background-color: transparent;
 `;
 
 export const SearchBtn = styled.button`
-  display: inline-block;
-  width: 42px;
-  height: 42px;
-  border-radius: 0px 4px 4px 0px;
-  border: 2px solid #656870;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border-radius: 0px 3px 3px 0px;
+  border: 1px solid #a19c97;
   border-left: 0;
-  background-color: #fff;
-  background-size: 40%;
+  background-color: transparent;
+  /* background-size: 40%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center; */
   cursor: pointer;
   outline: none;
 `;

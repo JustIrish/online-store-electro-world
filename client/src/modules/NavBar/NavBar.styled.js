@@ -1,5 +1,8 @@
 import styled from 'styled-components';
 
+import { ReactComponent as SvgUser } from 'images/svg/user.svg';
+import { ReactComponent as SvgBag } from 'images/svg/bag.svg';
+
 export const NavSlyled = styled.nav`
   display: flex;
   align-items: center;
@@ -36,4 +39,14 @@ export const Contacts = styled.div`
 export const ContactsText = styled.p`
   margin-left: 6px;
   font-size: 20px;
+`;
+
+export const Bag = styled(SvgBag)`
+  width: 23px;
+  height: 26px;
+`;
+
+export const User = styled(SvgUser)`
+  width: 20px;
+  height: 25px;
 `;
