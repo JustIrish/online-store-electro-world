@@ -1,9 +1,9 @@
-import ProductList from './ProductList/ProductList';
 import { GlobalStyle } from 'shared/styles/GlobalStyle';
 import { Layout, Header, Container } from './Layout.styled';
 
 import data from 'data/productList.json';
 import NavBar from './NavBar/NavBar';
+import Catalog from './Catalog/Catalog';
 
 const App = () => {
   return (
@@ -15,7 +15,7 @@ const App = () => {
       </Header>
       <main>
         <Container>
-          <ProductList array={data}></ProductList>
+          <Catalog array={data} />
         </Container>
       </main>
       <footer></footer>

@@ -28,9 +28,7 @@ export const SearchBtn = styled.button`
   border: 1px solid #a19c97;
   border-left: 0;
   background-color: transparent;
-  /* background-size: 40%;
-  background-repeat: no-repeat;
-  background-position: center; */
+
   cursor: pointer;
   outline: none;
 `;

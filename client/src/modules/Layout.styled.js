@@ -9,9 +9,6 @@ export const Header = styled.header`
   background-color: ${({ theme: { colors } }) => colors.bg};
 `;
 
-// export const Main = styled.main`
-//   padding: 40px 0;`;
-
 export const Container = styled.div`
   width: 100%;
   margin: 0 auto;

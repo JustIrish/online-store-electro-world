@@ -15,7 +15,7 @@ const ProductList = ({ array = [] }) => {
           height="380"
           loading="lazy"
         />
-        <Descr>Хіти цього року</Descr>
+        <Descr>Хiти цього року</Descr>
         <ItemTitle>Все для кухні</ItemTitle>
       </li>
       {array.map(product => (
@@ -32,7 +32,7 @@ const ProductList = ({ array = [] }) => {
           loading="lazy"
         />
         <Descr>Комплекти</Descr>
-        <ItemTitle>Набори техніки</ItemTitle>
+        <ItemTitle>Набори технiки</ItemTitle>
       </li>
     </CardList>
   );
