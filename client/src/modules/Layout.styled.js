@@ -9,9 +9,6 @@ export const Header = styled.header`
   background-color: ${({ theme: { colors } }) => colors.bg};
 `;
 
-export const Container = styled.div`
-  width: 100%;
-  margin: 0 auto;
-  max-width: 1920px;
-  padding: 0 120px;
+export const Footer = styled.footer`
+  padding: 88px 112px;
 `;

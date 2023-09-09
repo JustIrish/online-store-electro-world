@@ -3,7 +3,7 @@ import Filter from 'shared/components/Filter/Filter';
 import SectionTitle from 'shared/components/SectionTitle/SectionTitle';
 import { Section, Text, BgText, FlexBox } from './Catalog.styled';
 
-const Catalog = ({ array }) => {
+const Catalog = ({ array = [] }) => {
   return (
     <Section>
       <SectionTitle title={'Каталог товарiв'} />
