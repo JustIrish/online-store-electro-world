@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import blenders from 'images/hero-img.png';
 import blenderbg from 'images/hero-img-bg.png';
 
-import { ReactComponent as SvgArrow } from 'images/svg/arrow.svg';
-
 export const HeroSection = styled.section`
   position: relative;
   padding: 238px 0px 68px;
@@ -67,6 +65,7 @@ export const Wrap = styled.div`
   position: relative;
   max-width: 50%;
   margin-left: 152px;
+  margin-bottom: 288px;
 `;
 
 export const Mark = styled.div`
@@ -116,54 +115,17 @@ export const Description = styled.p`
   margin-bottom: 20px;
   max-width: 420px;
 `;
-export const Link = styled.a`
-  position: relative;
-  z-index: 10;
-  display: inline-block;
-  color: inherit;
-  font-family: 'Sansation Regular';
-  font-size: 18px;
-  font-weight: 700;
-  text-decoration-line: underline;
-  background-color: ${({ theme: { colors } }) => colors.bg};
-  margin-left: 255px;
-  margin-right: 6px;
-  margin-bottom: 215px;
 
-  &::before {
-    content: '';
-    position: absolute;
-    top: -13px;
-    left: -20px;
-    width: 50px;
-    height: 50px;
-
-    border: 2px solid ${({ theme: { colors } }) => colors.secondaryTxt};
-    border-radius: 50%;
-  }
-  /* 
-  &::after {
-    content: '';
-    position: absolute;
-    z-index: 1;
-    top: -13px;
-    left: -20px;
-    width: 50px;
-    height: 50px;
-
-    border: 3px solid ${({ theme: { colors } }) => colors.bg};
-    border-radius: 0 50% 50% 0;
-  } */
-`;
-
-export const Arrow = styled(SvgArrow)`
-  width: 36px;
+export const LinkWrap = styled.div`
+  display: flex;
+  align-items: center;
+  margin-left: 250px;
 `;
 
 export const Slider = styled.p`
   position: absolute;
   right: 100px;
-  bottom: 0;
+  bottom: -257px;
   color: ${({ theme: { colors } }) => colors.secondaryTxt};
   font-family: 'Sansation Regular';
   font-size: 42px;

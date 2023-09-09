@@ -1,4 +1,6 @@
 import Container from 'shared/components/Container/Container';
+import Link from 'shared/components/Link/Link';
+
 import {
   HeroSection,
   Wrap,
@@ -6,8 +8,7 @@ import {
   Title,
   Text,
   Description,
-  Link,
-  Arrow,
+  LinkWrap,
   Slider,
   FlexWrap,
   Social,
@@ -25,8 +26,9 @@ const Hero = () => {
             Відмінний і незамінний помічник на будь-якій кухні для приготування
             та втілення будь-яких кулінарних ідей
           </Description>
-          <Link href="/">Дiзнатись бiльше</Link>
-          <Arrow />
+          <LinkWrap>
+            <Link text="Дiзнатись бiльше" />
+          </LinkWrap>
           <Slider>01/05</Slider>
         </Wrap>
         <FlexWrap>
