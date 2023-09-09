@@ -7,6 +7,10 @@ import {
   Text,
   Description,
   Link,
+  Arrow,
+  Slider,
+  FlexWrap,
+  Social,
 } from './Hero.styled';
 
 const Hero = () => {
@@ -22,8 +26,14 @@ const Hero = () => {
             та втілення будь-яких кулінарних ідей
           </Description>
           <Link href="/">Дiзнатись бiльше</Link>
-          <p>01/05</p>
+          <Arrow />
+          <Slider>01/05</Slider>
         </Wrap>
+        <FlexWrap>
+          {' '}
+          <Social>Facebook</Social>
+          <Social>Instagram</Social>
+        </FlexWrap>
       </Container>
     </HeroSection>
   );
