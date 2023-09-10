@@ -33,8 +33,8 @@ export const validationRules = {
   phone: {
     required: 'Phone is required',
     minLength: {
-      value: 3,
-      message: 'Phone  must have at least 3 characters',
+      value: 6,
+      message: 'Phone  must have at least 6 characters',
     },
     maxLength: {
       value: 15,

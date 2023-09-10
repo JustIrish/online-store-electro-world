@@ -1,9 +1,13 @@
 import { HiPhone } from 'react-icons/hi';
 import { BsFillEnvelopeFill, BsFillGeoFill } from 'react-icons/bs';
 
+import { toast } from 'react-hot-toast';
+
 import Container from 'shared/components/Container/Container';
 import ContactsForm from 'shared/components/ContactsForm/ContactsForm';
 import SectionTitle from 'shared/components/SectionTitle/SectionTitle';
+
+import { addUser } from 'shared/API/api';
 
 import {
   Section,
@@ -21,13 +25,23 @@ import {
 } from './Contacts.styled';
 
 const Contacts = () => {
+  const createUser = async user => {
+    try {
+      await addUser(user);
+      toast.success('All right, your data has been shipped!');
+    } catch (error) {
+      console.error(error);
+      toast.error('Something went wrong...');
+    }
+  };
+
   return (
     <Section>
       <Container>
         <FlexWrap>
           <FormWrap>
             <FormTitle>Запит пропозицій</FormTitle>
-            <ContactsForm />
+            <ContactsForm onSubmit={createUser} />
           </FormWrap>
           <ContactsBox>
             <SectionTitle title={'Ми завжди Вам радi'} />

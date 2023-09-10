@@ -1,7 +1,5 @@
-// import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-
-import { toast } from 'react-hot-toast';
 
 import { validationRules } from 'common/validation';
 
@@ -13,7 +11,9 @@ import {
   StyledBtn,
 } from './ContactsForm.styled';
 
-const ContactsForm = () => {
+const ContactsForm = ({ onSubmit }) => {
+  const [user, setUser] = useState({});
+
   const {
     register,
     handleSubmit,
@@ -22,8 +22,8 @@ const ContactsForm = () => {
   } = useForm({ mode: 'onChange' });
 
   const handleFormSubmit = data => {
-    console.log(data);
-    const { name, email, phone } = data;
+    setUser(data);
+    onSubmit(user);
     reset();
   };
 
