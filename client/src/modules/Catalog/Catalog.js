@@ -1,7 +1,7 @@
 import ProductList from 'modules/ProductList/ProductList';
 import Filter from 'shared/components/Filter/Filter';
 import SectionTitle from 'shared/components/SectionTitle/SectionTitle';
-import { Section, Text, BgText, FlexBox } from './Catalog.styled';
+import { Section, Text, BgText, FlexBox, LinkMore } from './Catalog.styled';
 
 const Catalog = ({ array = [] }) => {
   return (
@@ -15,8 +15,8 @@ const Catalog = ({ array = [] }) => {
         <Filter title="Фiльтри" options="Всi" />
         <Filter title="Сортувати" options="Найпопулярніші" />
       </FlexBox>
-
       <ProductList array={array} />
+      <LinkMore href="/">Показати бiльше</LinkMore>
     </Section>
   );
 };

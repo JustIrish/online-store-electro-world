@@ -1,4 +1,5 @@
 import { HiPhone } from 'react-icons/hi';
+import { ImSearch } from 'react-icons/im';
 
 import Logo from 'shared/components/Logo/Logo';
 
@@ -13,14 +14,14 @@ import {
 } from './NavBar.styled';
 
 import items from './menuItems.json';
-import SearchBar from 'modules/SearchBar/SearchBar';
+import SearchBar from 'shared/SearchBar/SearchBar';
 
 const NavBar = () => {
   return (
     <>
       <NavSlyled>
         <Logo />
-        <SearchBar />
+        <SearchBar text={'Ваш запит'} icon={ImSearch} />
         <MenuList>
           {' '}
           {items.map(({ id, text, link }) => (

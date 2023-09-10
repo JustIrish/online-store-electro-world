@@ -1,11 +1,10 @@
 import { useState } from 'react';
-import { ImSearch } from 'react-icons/im';
 
 import toast from 'react-hot-toast';
 
 import { SearchForm, SearchInput, SearchBtn } from './SearchBar.styled';
 
-const SearchBar = () => {
+const SearchBar = ({ text, icon: IconComponent }) => {
   const [query, setQuery] = useState('');
 
   const handlerSubmit = evt => {
@@ -26,7 +25,7 @@ const SearchBar = () => {
         onChange={e => setQuery(e.target.value)}
       />
       <SearchBtn type="submit">
-        <ImSearch size={28} color="#98887A" />
+        <IconComponent size="27" color="#98887A" />
       </SearchBtn>
     </SearchForm>
   );

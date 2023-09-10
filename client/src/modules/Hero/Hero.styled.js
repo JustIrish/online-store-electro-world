@@ -3,12 +3,15 @@ import styled from 'styled-components';
 import blenders from 'images/hero-img.png';
 import blenderbg from 'images/hero-img-bg.png';
 
+import { ReactComponent as SvgArrowR } from 'images/svg/arrow-slider-r.svg';
+import { ReactComponent as SvgArrowL } from 'images/svg/arrow-slider-l.svg';
+
 export const HeroSection = styled.section`
   position: relative;
   padding: 238px 0px 68px;
   background-color: ${({ theme: { colors } }) => colors.bg};
   background-image: url(${blenderbg}), url(${blenders});
-  background-position: bottom right, top right 15%;
+  background-position: bottom right, bottom right 5%;
   background-repeat: no-repeat;
   background-size: contain, contain;
 
@@ -124,13 +127,33 @@ export const LinkWrap = styled.div`
 
 export const Slider = styled.p`
   position: absolute;
-  right: 100px;
-  bottom: -257px;
+  right: 200px;
+  bottom: -300px;
   color: ${({ theme: { colors } }) => colors.secondaryTxt};
   font-family: 'Sansation Regular';
   font-size: 42px;
   font-weight: 400;
   line-height: 1.009;
+
+  span {
+    color: #e5e5e5;
+    font-size: 26px;
+  }
+`;
+
+export const ArrowWrap = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  margin-top: 40px;
+`;
+
+export const ArrowLeft = styled(SvgArrowL)`
+  width: 52px;
+`;
+
+export const ArrowRight = styled(SvgArrowR)`
+  width: 52px;
 `;
 
 export const FlexWrap = styled.div`

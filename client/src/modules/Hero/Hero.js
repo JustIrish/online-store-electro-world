@@ -10,6 +10,9 @@ import {
   Description,
   LinkWrap,
   Slider,
+  ArrowWrap,
+  ArrowLeft,
+  ArrowRight,
   FlexWrap,
   Social,
 } from './Hero.styled';
@@ -29,7 +32,13 @@ const Hero = () => {
           <LinkWrap>
             <Link text="Дiзнатись бiльше" />
           </LinkWrap>
-          <Slider>01/05</Slider>
+          <Slider>
+            01<span>/05</span>
+            <ArrowWrap>
+              <ArrowLeft />
+              <ArrowRight />
+            </ArrowWrap>
+          </Slider>
         </Wrap>
         <FlexWrap>
           {' '}

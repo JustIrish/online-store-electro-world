@@ -10,5 +10,5 @@ export const Header = styled.header`
 `;
 
 export const Footer = styled.footer`
-  padding: 88px 112px;
+  padding: 88px 0px 112px;
 `;

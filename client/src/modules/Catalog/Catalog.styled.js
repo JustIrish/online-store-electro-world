@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   position: relative;
-  padding: 80px 0px;
+  padding: 80px 0px 105px;
 `;
 
 export const Text = styled.p`
@@ -41,4 +41,13 @@ export const FlexBox = styled.div`
   justify-content: space-between;
   max-width: 500px;
   margin-bottom: 81px;
+`;
+
+export const LinkMore = styled.a`
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  color: inherit;
+  font-size: 20px;
+  text-decoration: underline;
 `;
