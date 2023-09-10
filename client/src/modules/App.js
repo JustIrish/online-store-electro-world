@@ -5,6 +5,7 @@ import NavBar from './NavBar/NavBar';
 import Hero from './Hero/Hero';
 import Catalog from './Catalog/Catalog';
 import Subscription from './Subscription/Subscription';
+import Contacts from './Contacts/Contacts';
 
 import { Layout, Header, Footer } from './Layout.styled';
 
@@ -24,6 +25,7 @@ const App = () => {
           <Catalog array={data} />
         </Container>
         <Subscription />
+        <Contacts />
       </main>
       <Footer>
         <Container>

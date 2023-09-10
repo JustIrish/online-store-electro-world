@@ -12,7 +12,7 @@ export const FlexWrap = styled.div`
 `;
 
 export const TitleWrap = styled.div`
-  max-width: 740px;
+  max-width: 770px;
 `;
 
 export const Text = styled.p`
