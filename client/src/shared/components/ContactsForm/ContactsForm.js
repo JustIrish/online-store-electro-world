@@ -1,17 +1,23 @@
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 
 import { toast } from 'react-hot-toast';
 
+import { validationRules } from 'common/validation';
+
 import { Arrow, Ellipse } from '../Link/Link.styled';
-import { StyledForm, StyledInput, StyledBtn } from './ContactsForm.styled';
+import {
+  StyledForm,
+  StyledInput,
+  ErrorStyled,
+  StyledBtn,
+} from './ContactsForm.styled';
 
 const ContactsForm = () => {
   const {
     register,
     handleSubmit,
     reset,
-    setValue,
     formState: { errors },
   } = useForm({ mode: 'onChange' });
 
@@ -25,24 +31,46 @@ const ContactsForm = () => {
     <>
       {' '}
       <StyledForm onSubmit={handleSubmit(handleFormSubmit)}>
-        <StyledInput
-          {...register('name')}
-          type="text"
-          name="name"
-          placeholder="Ім'я"
-        />
-        <StyledInput
-          {...register('email')}
-          type="email"
-          name="email"
-          placeholder="Пошта"
-        />
-        <StyledInput
-          {...register('phone')}
-          type="tel"
-          name="phone"
-          placeholder="Телефон"
-        />
+        <div>
+          <StyledInput
+            {...register('name', validationRules.name)}
+            type="text"
+            name="name"
+            placeholder="Ім'я"
+            style={{
+              outlineColor: errors.name && 'transparent',
+              borderColor: errors.name && '#FF2B77',
+            }}
+          />
+          {errors.name && <ErrorStyled>{errors.name.message}</ErrorStyled>}
+        </div>
+        <div>
+          <StyledInput
+            {...register('email', validationRules.email)}
+            type="email"
+            name="email"
+            placeholder="Пошта"
+            style={{
+              outlineColor: errors.email && 'transparent',
+              borderColor: errors.email && '#FF2B77',
+            }}
+          />
+          {errors.email && <ErrorStyled>{errors.email.message}</ErrorStyled>}
+        </div>
+        <div>
+          <StyledInput
+            {...register('phone', validationRules.phone)}
+            type="tel"
+            name="phone"
+            placeholder="Телефон"
+            style={{
+              outlineColor: errors.phone && 'transparent',
+              borderColor: errors.phone && '#FF2B77',
+            }}
+          />
+          {errors.phone && <ErrorStyled>{errors.phone.message}</ErrorStyled>}
+        </div>
+
         <div>
           {' '}
           <StyledBtn type="submit">
