@@ -14,7 +14,7 @@ import {
 } from './NavBar.styled';
 
 import items from './menuItems.json';
-import SearchBar from 'shared/SearchBar/SearchBar';
+import SearchBar from 'shared/components/SearchBar/SearchBar';
 
 const NavBar = () => {
   return (

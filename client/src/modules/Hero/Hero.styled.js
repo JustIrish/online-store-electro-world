@@ -141,7 +141,7 @@ export const Slider = styled.p`
   }
 `;
 
-export const ArrowWrap = styled.div`
+export const ArrowWrap = styled.span`
   display: flex;
   align-items: center;
   gap: 29px;
@@ -162,7 +162,7 @@ export const FlexWrap = styled.div`
   gap: 30px;
 `;
 
-export const Social = styled.p`
+export const Social = styled.a`
   color: ${({ theme: { colors } }) => colors.secondaryTxt};
   font-family: 'Sansation Regular';
   font-size: 18px;

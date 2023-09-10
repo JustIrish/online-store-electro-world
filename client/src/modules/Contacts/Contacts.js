@@ -2,7 +2,7 @@ import { HiPhone } from 'react-icons/hi';
 import { BsFillEnvelopeFill, BsFillGeoFill } from 'react-icons/bs';
 
 import Container from 'shared/components/Container/Container';
-import Link from 'shared/components/Link/Link';
+import ContactsForm from 'shared/components/ContactsForm/ContactsForm';
 import SectionTitle from 'shared/components/SectionTitle/SectionTitle';
 
 import {
@@ -27,14 +27,7 @@ const Contacts = () => {
         <FlexWrap>
           <FormWrap>
             <FormTitle>Запит пропозицій</FormTitle>
-            <form>
-              <input />
-              <input />
-              <input />
-            </form>
-            <div>
-              <Link text={'Замовити дзвiнок'} />
-            </div>
+            <ContactsForm />
           </FormWrap>
           <ContactsBox>
             <SectionTitle title={'Ми завжди Вам радi'} />
@@ -44,21 +37,23 @@ const Contacts = () => {
                   <InfoTitle>Зв'язатися з нами:</InfoTitle>
                   <InfoWrap>
                     <HiPhone size="15" color="#3D3025" />
-                    <Info>+38 (097) 466 31 90</Info>
+                    <Info href="tel:+380974663190">+38 (097) 466 31 90</Info>
                   </InfoWrap>
                 </li>
                 <li>
                   <InfoTitle>Написати:</InfoTitle>
                   <InfoWrap>
                     <BsFillEnvelopeFill size="15" color="#3D3025" />
-                    <Info>info@mir.electro.com</Info>
+                    <Info href="mailto:info@mir.electro.com">
+                      info@mir.electro.com
+                    </Info>
                   </InfoWrap>
                 </li>
                 <li>
                   <InfoTitle>Завжди бути в курсi:</InfoTitle>
                   <SocialWrap>
-                    <Social>Facebook</Social>
-                    <Social>Instagram</Social>
+                    <Social href="https://www.facebook.com/">Facebook</Social>
+                    <Social href="https://www.instagram.com/">Instagram</Social>
                   </SocialWrap>
                 </li>
                 <li>
@@ -69,7 +64,9 @@ const Contacts = () => {
                       color="#3D3025"
                       style={{ marginBottom: '10px' }}
                     />
-                    <Info>м. Днiпро, вул. Глинки 2, ТРЦ “Мiст-Сiтi”</Info>
+                    <Info href="">
+                      м. Днiпро, вул. Глинки 2, ТРЦ “Мiст-Сiтi”
+                    </Info>
                   </InfoWrap>
                 </li>
               </ContactsList>

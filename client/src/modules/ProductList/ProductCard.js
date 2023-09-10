@@ -19,7 +19,6 @@ import {
 const ProductCard = ({
   product: { name, price, novelty, promotion, oldPrice, picture },
 }) => {
-  console.log(novelty);
   return (
     <Card>
       <ImageWrap>

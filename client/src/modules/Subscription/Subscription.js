@@ -2,7 +2,7 @@ import { BsFillEnvelopeFill } from 'react-icons/bs';
 
 import Container from 'shared/components/Container/Container';
 import SectionTitle from 'shared/components/SectionTitle/SectionTitle';
-import SearchBar from 'shared/SearchBar/SearchBar';
+import SearchBar from 'shared/components/SearchBar/SearchBar';
 import Link from 'shared/components/Link/Link';
 
 import { Section, FlexWrap, TitleWrap, Text } from './Subscription.styled';

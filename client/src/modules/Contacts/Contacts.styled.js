@@ -55,7 +55,8 @@ export const InfoWrap = styled.div`
   gap: 6px;
 `;
 
-export const Info = styled.p`
+export const Info = styled.a`
+  color: inherit;
   font-size: 20px;
 `;
 
@@ -64,7 +65,8 @@ export const SocialWrap = styled.p`
   gap: 40px;
 `;
 
-export const Social = styled.p`
+export const Social = styled.a`
+  color: inherit;
   font-family: 'Sansation Regular';
   font-size: 18px;
   font-weight: 400;

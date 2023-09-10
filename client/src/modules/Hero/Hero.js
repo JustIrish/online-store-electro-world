@@ -42,8 +42,8 @@ const Hero = () => {
         </Wrap>
         <FlexWrap>
           {' '}
-          <Social>Facebook</Social>
-          <Social>Instagram</Social>
+          <Social href="https://www.facebook.com/">Facebook</Social>
+          <Social href="https://www.instagram.com/">Instagram</Social>
         </FlexWrap>
       </Container>
     </HeroSection>
