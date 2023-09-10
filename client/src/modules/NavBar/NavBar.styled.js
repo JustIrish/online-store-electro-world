@@ -51,7 +51,8 @@ export const Contacts = styled.div`
   }
 `;
 
-export const ContactsText = styled.p`
+export const ContactsText = styled.a`
+  color: inherit;
   margin-left: 6px;
   font-size: 20px;
 `;

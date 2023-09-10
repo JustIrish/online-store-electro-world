@@ -1,3 +1,5 @@
+import { Toaster } from 'react-hot-toast';
+
 import { GlobalStyle } from 'shared/styles/GlobalStyle';
 
 import Container from 'shared/components/Container/Container';
@@ -33,6 +35,7 @@ const App = () => {
         </Container>
       </Footer>
       <GlobalStyle />
+      <Toaster position="top-center" />
     </Layout>
   );
 };

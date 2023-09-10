@@ -71,7 +71,7 @@ const ContactsForm = () => {
           {errors.phone && <ErrorStyled>{errors.phone.message}</ErrorStyled>}
         </div>
 
-        <div>
+        <div style={{ marginTop: '10px' }}>
           {' '}
           <StyledBtn type="submit">
             <Ellipse />

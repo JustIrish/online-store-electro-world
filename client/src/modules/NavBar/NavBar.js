@@ -32,7 +32,9 @@ const NavBar = () => {
         </MenuList>
         <Contacts>
           <HiPhone size="15" color="#3D3025" />
-          <ContactsText>+38 (097) 466 31 90</ContactsText>
+          <ContactsText href="tel:+380974663190">
+            +38 (097) 466 31 90
+          </ContactsText>
           <Bag />
           <User />
         </Contacts>
