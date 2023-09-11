@@ -49,6 +49,20 @@ export const HeroSection = styled.section`
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: -50%;
+
+  &::before {
+    content: '';
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    left: 50%;
+    width: 13px;
+    height: 13px;
+    transform: translate(-50%, -50%);
+    background-color: #e8e8e8;
+    opacity: 0.4;
+    border-radius: 50%;
+  }
 `;
 
 export const BoxCircle = styled.div`
@@ -125,7 +139,7 @@ export const ImageWrap = styled.div`
   z-index: 10;
   top: 50%;
   left: 50%;
-  transform: translate(-17%, -43%);
+  transform: translate(-16.5%, -44%);
 `;
 
 export const FlexBox = styled.div`

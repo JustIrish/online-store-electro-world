@@ -7,7 +7,8 @@
     "price": "1.760",
     "novelty": false,
     "promotion": "20",
-    "picture": "images/blender.png"
+    "picture": "images/blender.png",
+    "picture2x": "images/blender-2x.png"
   },
   {
     "id": "id-2",
@@ -17,7 +18,8 @@
     "price": "1.590",
     "novelty": true,
     "promotion": "",
-    "picture": "images/kettle-scarlett.png"
+    "picture": "images/kettle-scarlett.png",
+    "picture2x": "images/kettle-scarlett-2x.png"
   },
   {
     "id": "id-3",
@@ -27,7 +29,8 @@
     "price": "1.120",
     "novelty": false,
     "promotion": "",
-    "picture": "images/toaster.png"
+    "picture": "images/toaster.png",
+    "picture2x": "images/toaster-2x.png"
   },
   {
     "id": "id-4",
@@ -37,7 +40,8 @@
     "price": "1.860",
     "novelty": false,
     "promotion": "",
-    "picture": "images/mixer.png"
+    "picture": "images/mixer.png",
+    "picture2x": "images/mixer-2x.png"
   },
   {
     "id": "id-5",
@@ -47,7 +51,8 @@
     "price": "2.140",
     "novelty": false,
     "promotion": "",
-    "picture": "images/juicer.png"
+    "picture": "images/juicer.png",
+    "picture2x": "images/juicer-2x.png"
   },
   {
     "id": "id-6",
@@ -57,7 +62,8 @@
     "price": "1.120",
     "novelty": false,
     "promotion": "",
-    "picture": "images/coffee-grinder.png"
+    "picture": "images/coffee-grinder.png",
+    "picture2x": "images/coffee-grinder-2x.png"
   },
   {
     "id": "id-7",
@@ -67,7 +73,8 @@
     "price": "4.890",
     "novelty": false,
     "promotion": "20",
-    "picture": "images/coffee-machine-scarlett.png"
+    "picture": "images/coffee-machine-scarlett.png",
+    "picture2x": "images/coffee-machine-scarlett-2x.png"
   },
   {
     "id": "id-8",
@@ -77,6 +84,7 @@
     "price": "2.360",
     "novelty": false,
     "promotion": "",
-    "picture": "images/meat-grinder.png"
+    "picture": "images/meat-grinder.png",
+    "picture2x": "images/meat-grinder-2x.png"
   }
 ]

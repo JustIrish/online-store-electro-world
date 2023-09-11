@@ -19,16 +19,16 @@ import {
 } from './ProductList.styled';
 
 const ProductCard = ({
-  product: { name, price, novelty, promotion, oldPrice, picture },
+  product: { name, price, novelty, promotion, oldPrice, picture, picture2x },
 }) => {
   return (
     <Card>
       <ImageWrap>
         <img
-          // srcSet={`
-          //   ${require(`../../${picture}`)} 1x,
-          //   ${require(`../../${picture.replace('.jpg', '-2x.jpg')}`)} 2x
-          // `}
+          srcSet={`
+            ${require(`../../${picture}`)} 1x,
+            ${require(`../../${picture2x}`)} 2x
+          `}
           src={require(`../../${picture}`)}
           alt={name}
           width="292"
@@ -75,6 +75,7 @@ ProductCard.propTypes = {
     promotion: PropTypes.string,
     oldPrice: PropTypes.string,
     picture: PropTypes.string.isRequired,
+    picture2x: PropTypes.string.isRequired,
   }).isRequired,
 };
 
