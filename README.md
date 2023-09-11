@@ -1,6 +1,6 @@
 # Online store "MIR electro"
 
-![Interface](./src/images/screen.jpg)
+![Interface](./client/src/images/screen.jpg)
 
 ## <ul>Функціонал:</ul>
 
@@ -15,4 +15,4 @@
 - React hook form
 - React-hot-toast for notifications
 
-## Backend Repository[here](https://github.com/JustIrish/online-store-electro-world/tree/main/server).
+## Backend Repository [here](https://github.com/JustIrish/online-store-electro-world/tree/main/server).

@@ -25,6 +25,10 @@ const ProductCard = ({
     <Card>
       <ImageWrap>
         <img
+          // srcSet={`
+          //   ${require(`../../${picture}`)} 1x,
+          //   ${require(`../../${picture.replace('.jpg', '-2x.jpg')}`)} 2x
+          // `}
           src={require(`../../${picture}`)}
           alt={name}
           width="292"
