@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/online-store-electro-world/static/css/main.7cda0caf.css",
-    "main.js": "/online-store-electro-world/static/js/main.a7a80f17.js",
+    "main.js": "/online-store-electro-world/static/js/main.d6b9c634.js",
     "static/media/hero-img-2x.png": "/online-store-electro-world/static/media/hero-img-2x.5a690791f0aa7d634ab1.png",
     "static/media/kitchen-appliances-sets-2x.jpg": "/online-store-electro-world/static/media/kitchen-appliances-sets-2x.8b0d0d9cf829a7a530ce.jpg",
     "static/media/coffee-machine-scarlett-2x.png": "/online-store-electro-world/static/media/coffee-machine-scarlett-2x.cf6914547a18cfb21ec9.png",
@@ -20,6 +20,7 @@
     "static/media/meat-grinder-2x.png": "/online-store-electro-world/static/media/meat-grinder-2x.2521f7644b085602de42.png",
     "static/media/coffee-grinder-2x.png": "/online-store-electro-world/static/media/coffee-grinder-2x.4bf0c88809ef14fc3b11.png",
     "static/media/juicer-2x.png": "/online-store-electro-world/static/media/juicer-2x.6a75a2ef35cf941f7d23.png",
+    "static/media/screen.jpg": "/online-store-electro-world/static/media/screen.a97785bd51880c8b618d.jpg",
     "static/media/toaster.png": "/online-store-electro-world/static/media/toaster.4a241c30de496c7415bb.png",
     "static/media/map.jpg": "/online-store-electro-world/static/media/map.9b21a462ed102974f928.jpg",
     "static/media/blender.png": "/online-store-electro-world/static/media/blender.b202be09c91f272c4b3e.png",
@@ -40,10 +41,10 @@
     "static/media/arrow-right.svg": "/online-store-electro-world/static/media/arrow-right.304a2fde504ab18b182d469bb0e198bd.svg",
     "static/media/arrow-bottom.svg": "/online-store-electro-world/static/media/arrow-bottom.590717616cdf49350e6187d8e8e22cef.svg",
     "main.7cda0caf.css.map": "/online-store-electro-world/static/css/main.7cda0caf.css.map",
-    "main.a7a80f17.js.map": "/online-store-electro-world/static/js/main.a7a80f17.js.map"
+    "main.d6b9c634.js.map": "/online-store-electro-world/static/js/main.d6b9c634.js.map"
   },
   "entrypoints": [
     "static/css/main.7cda0caf.css",
-    "static/js/main.a7a80f17.js"
+    "static/js/main.d6b9c634.js"
   ]
 }
