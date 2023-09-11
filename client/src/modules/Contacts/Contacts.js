@@ -31,15 +31,18 @@ import {
 const Contacts = () => {
   const [users, setUsers] = useState([]);
   const [isShowUsers, setIsShowUsers] = useState(false);
+  const [isLoading, setIsLoaing] = useState(false);
 
   const openUserList = async () => {
     setIsShowUsers(true);
     try {
+      setIsLoaing(true);
       const data = await fetchUsers();
       setUsers(data);
     } catch (error) {
-      console.log(error.response.data.message);
       toast.error('Something went wrong...');
+    } finally {
+      setIsLoaing(false);
     }
   };
 
@@ -57,7 +60,13 @@ const Contacts = () => {
             <BtnShowUsers type="button" onClick={openUserList}>
               Користувачi, якi вже з нами
             </BtnShowUsers>
-            {isShowUsers && <UsersList array={users} onClose={closeUserList} />}
+            {isShowUsers && Boolean(users.length) && (
+              <UsersList
+                isLoading={isLoading}
+                array={users}
+                onClose={closeUserList}
+              />
+            )}
           </FormWrap>
           <ContactsBox>
             <SectionTitle title={'Ми завжди Вам радi'} />

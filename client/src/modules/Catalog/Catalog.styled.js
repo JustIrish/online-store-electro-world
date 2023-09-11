@@ -2,6 +2,8 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   position: relative;
+  z-index: 5;
+  background-color: #fff;
   padding: 80px 0px 105px;
 `;
 

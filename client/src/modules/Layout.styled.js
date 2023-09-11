@@ -5,6 +5,8 @@ export const Layout = styled.div`
 `;
 
 export const Header = styled.header`
+  position: relative;
+  z-index: 5;
   padding: 33px 0px;
   background-color: ${({ theme: { colors } }) => colors.bg};
 `;

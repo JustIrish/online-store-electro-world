@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { AiOutlineClose } from 'react-icons/ai';
+import Spinner from 'shared/components/Spinner/Spinner';
 
 import {
   ListWrap,
@@ -11,32 +12,41 @@ import {
   TextEmail,
 } from './UsersList.styled';
 
-const UsersList = ({ array = [], onClose }) => {
+const UsersList = ({ isLoading, array = [], onClose }) => {
   return (
     <ListWrap>
-      <BtnClose onClick={onClose}>
-        <AiOutlineClose size="30" />
-      </BtnClose>
-      <ListStyled>
-        {array.map(({ _id, name, email }) => (
-          <ItemStyled key={_id}>
-            <TextName>{name}</TextName>
-            <TextEmail>{email}</TextEmail>
-          </ItemStyled>
-        ))}
-      </ListStyled>
+      {isLoading ? (
+        <Spinner />
+      ) : (
+        <>
+          <BtnClose onClick={onClose}>
+            <AiOutlineClose size="30" />
+          </BtnClose>
+
+          <ListStyled>
+            {array.map(({ _id, name, email }) => (
+              <ItemStyled key={_id}>
+                <TextName>{name}</TextName>
+                <TextEmail>{email}</TextEmail>
+              </ItemStyled>
+            ))}
+          </ListStyled>
+        </>
+      )}
     </ListWrap>
   );
 };
 
 UsersList.propTypes = {
+  isLoading: PropTypes.bool.isRequired,
   array: PropTypes.arrayOf(
     PropTypes.shape({
       _id: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       email: PropTypes.string.isRequired,
     })
-  ).isRequired,
+  ),
+  onClose: PropTypes.func.isRequired,
 };
 
 export default UsersList;

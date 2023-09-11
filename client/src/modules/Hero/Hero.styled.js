@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 
-import blenders from 'images/hero-img.png';
 import blenderbg from 'images/hero-img-bg.png';
 
 import { ReactComponent as SvgArrowR } from 'images/svg/arrow-slider-r.svg';
@@ -10,10 +9,15 @@ export const HeroSection = styled.section`
   position: relative;
   padding: 238px 0px 68px;
   background-color: ${({ theme: { colors } }) => colors.bg};
-  background-image: url(${blenderbg}), url(${blenders});
-  background-position: bottom right, bottom right 5%;
+  background-image: url(${blenderbg});
+  background-position: bottom right;
   background-repeat: no-repeat;
-  background-size: contain, contain;
+  background-size: -50%;
+`;
+
+export const BoxCircle = styled.div`
+  width: 100%;
+  height: 100%;
 
   &::after {
     content: '';
@@ -23,7 +27,8 @@ export const HeroSection = styled.section`
     width: 310px;
     height: 310px;
     transform: translate(-50%, -50%);
-    border: 2px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    opacity: 0.6;
     border-radius: 50%;
   }
 
@@ -35,11 +40,17 @@ export const HeroSection = styled.section`
     width: 560px;
     height: 560px;
     transform: translate(-50%, -50%);
-    border: 2px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    opacity: 0.6;
     border-radius: 50%;
   }
+`;
 
-  /* &::before {
+export const BoxCircleSecond = styled.div`
+  width: 100%;
+  height: 100%;
+
+  &::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -47,7 +58,8 @@ export const HeroSection = styled.section`
     width: 898px;
     height: 898px;
     transform: translate(-50%, -50%);
-    border: 2px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    opacity: 0.6;
     border-radius: 50%;
   }
 
@@ -59,16 +71,47 @@ export const HeroSection = styled.section`
     width: 1122px;
     height: 1122px;
     transform: translate(-50%, -50%);
-    border: 2px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
+    opacity: 0.6;
     border-radius: 50%;
-  } */
+  }
 `;
 
 export const Wrap = styled.div`
   position: relative;
-  max-width: 50%;
   margin-left: 152px;
   margin-bottom: 288px;
+`;
+
+export const ImageWrap = styled.div`
+  position: absolute;
+  z-index: 10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-17%, -43%);
+`;
+
+export const FlexBox = styled.div`
+  position: absolute;
+  bottom: 30%;
+  left: 42%;
+
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  padding: 19px 30px;
+
+  border-width: 1px;
+  border-radius: 10px;
+  border-color: transparent;
+  border-style: solid;
+  box-shadow: 1px 1px 2px rgba(152, 136, 122, 0.5);
+`;
+
+export const ImageTitle = styled.p`
+  font-family: 'Sansation Regular';
+  font-size: 22px;
+  font-weight: 400;
 `;
 
 export const Mark = styled.div`
@@ -127,7 +170,7 @@ export const LinkWrap = styled.div`
 
 export const Slider = styled.p`
   position: absolute;
-  right: 200px;
+  left: 38%;
   bottom: -300px;
   color: ${({ theme: { colors } }) => colors.secondaryTxt};
   font-family: 'Sansation Regular';
