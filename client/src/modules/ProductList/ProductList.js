@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import ProductCard from './ProductCard';
 
 import { CardList, ImageStyled, Descr, ItemTitle } from './ProductList.styled';
@@ -36,6 +38,14 @@ const ProductList = ({ array = [] }) => {
       </li>
     </CardList>
   );
+};
+
+ProductList.propTypes = {
+  array: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 };
 
 export default ProductList;

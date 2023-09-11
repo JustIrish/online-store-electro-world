@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'http://localhost:3000';
+axios.defaults.baseURL = 'http://localhost:8000';
 
 export const fetchUsers = async () => {
   const response = await axios.get(`/api/user`);
@@ -8,5 +8,6 @@ export const fetchUsers = async () => {
 };
 
 export const addUser = async user => {
+  console.log(user);
   return axios.post(`/api/user`, user);
 };

@@ -1,7 +1,10 @@
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 
+import { toast } from 'react-hot-toast';
+
 import { validationRules } from 'common/validation';
+
+import { addUser } from 'shared/API/api';
 
 import { Arrow, Ellipse } from '../Link/Link.styled';
 import {
@@ -11,9 +14,7 @@ import {
   StyledBtn,
 } from './ContactsForm.styled';
 
-const ContactsForm = ({ onSubmit }) => {
-  const [user, setUser] = useState({});
-
+const ContactsForm = () => {
   const {
     register,
     handleSubmit,
@@ -21,10 +22,18 @@ const ContactsForm = ({ onSubmit }) => {
     formState: { errors },
   } = useForm({ mode: 'onChange' });
 
-  const handleFormSubmit = data => {
-    setUser(data);
-    onSubmit(user);
-    reset();
+  const handleFormSubmit = async data => {
+    try {
+      await addUser(data);
+      toast.success('All right, your data has been shipped!');
+      reset();
+    } catch (error) {
+      if (error.response.status === 401) {
+        toast.error(error.response.data.message);
+      } else {
+        toast.error('Something went wrong...');
+      }
+    }
   };
 
   return (

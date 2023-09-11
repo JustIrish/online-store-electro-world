@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { GiHearts, GiShoppingBag } from 'react-icons/gi';
 
 import {
@@ -58,6 +60,18 @@ const ProductCard = ({
       </DescWrap>
     </Card>
   );
+};
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    id: PropTypes.string.isRequired,
+    name: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    novelty: PropTypes.bool.isRequired,
+    promotion: PropTypes.string,
+    oldPrice: PropTypes.string,
+    picture: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default ProductCard;

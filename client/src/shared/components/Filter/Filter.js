@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   FilterWrap,
   FilterTitle,
@@ -15,6 +17,11 @@ const Filter = ({ title, options }) => {
       </FilterOptions>
     </FilterWrap>
   );
+};
+
+Filter.propTypes = {
+  title: PropTypes.string.isRequired,
+  options: PropTypes.string.isRequired,
 };
 
 export default Filter;

@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { useState } from 'react';
 
 import toast from 'react-hot-toast';
@@ -21,7 +23,7 @@ const SearchBar = ({ text, icon: IconComponent }) => {
         type="text"
         name="input"
         value={query}
-        placeholder="Ваш запит"
+        placeholder={text}
         onChange={e => setQuery(e.target.value)}
       />
       <SearchBtn type="submit">
@@ -29,6 +31,10 @@ const SearchBar = ({ text, icon: IconComponent }) => {
       </SearchBtn>
     </SearchForm>
   );
+};
+
+SearchBar.propType = {
+  text: PropTypes.string.isRequired,
 };
 
 export default SearchBar;

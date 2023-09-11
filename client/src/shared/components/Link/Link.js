@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import { StyledLink, Arrow, Ellipse } from './Link.styled';
 
 const Link = ({ text }) => {
@@ -10,6 +12,10 @@ const Link = ({ text }) => {
       <Arrow />
     </>
   );
+};
+
+Link.propTypes = {
+  text: PropTypes.string.isRequired,
 };
 
 export default Link;
