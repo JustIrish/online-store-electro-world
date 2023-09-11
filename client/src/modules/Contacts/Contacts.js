@@ -1,19 +1,23 @@
-import { HiPhone } from 'react-icons/hi';
-import { BsFillEnvelopeFill, BsFillGeoFill } from 'react-icons/bs';
+import { useState } from 'react';
 
 import { toast } from 'react-hot-toast';
+
+import { HiPhone } from 'react-icons/hi';
+import { BsFillEnvelopeFill, BsFillGeoFill } from 'react-icons/bs';
 
 import Container from 'shared/components/Container/Container';
 import ContactsForm from 'shared/components/ContactsForm/ContactsForm';
 import SectionTitle from 'shared/components/SectionTitle/SectionTitle';
+import UsersList from 'modules/UsersList/UsersList';
 
-import { addUser } from 'shared/API/api';
+import { fetchUsers } from 'shared/API/api';
 
 import {
   Section,
   FlexWrap,
   FormWrap,
   FormTitle,
+  BtnShowUsers,
   ContactsBox,
   FlexBox,
   ContactsList,
@@ -25,14 +29,22 @@ import {
 } from './Contacts.styled';
 
 const Contacts = () => {
-  const createUser = async user => {
+  const [users, setUsers] = useState([]);
+  const [isShowUsers, setIsShowUsers] = useState(false);
+
+  const openUserList = async () => {
+    setIsShowUsers(true);
     try {
-      await addUser(user);
-      toast.success('All right, your data has been shipped!');
+      const data = await fetchUsers();
+      setUsers(data);
     } catch (error) {
-      console.error(error);
+      console.log(error.response.data.message);
       toast.error('Something went wrong...');
     }
+  };
+
+  const closeUserList = () => {
+    setIsShowUsers(false);
   };
 
   return (
@@ -41,7 +53,11 @@ const Contacts = () => {
         <FlexWrap>
           <FormWrap>
             <FormTitle>Запит пропозицій</FormTitle>
-            <ContactsForm onSubmit={createUser} />
+            <ContactsForm />
+            <BtnShowUsers type="button" onClick={openUserList}>
+              Користувачi, якi вже з нами
+            </BtnShowUsers>
+            {isShowUsers && <UsersList array={users} onClose={closeUserList} />}
           </FormWrap>
           <ContactsBox>
             <SectionTitle title={'Ми завжди Вам радi'} />

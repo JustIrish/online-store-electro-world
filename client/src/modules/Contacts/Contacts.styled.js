@@ -5,6 +5,7 @@ export const Section = styled.section`
 `;
 
 export const FlexWrap = styled.div`
+  position: relative;
   display: flex;
   align-items: flex-start;
 `;
@@ -23,6 +24,20 @@ export const FormTitle = styled.h3`
   letter-spacing: 1.25px;
   text-transform: uppercase;
   margin-bottom: 71px;
+`;
+
+export const BtnShowUsers = styled.button`
+  padding: 10px;
+  margin-top: 30px;
+  border-color: transparent;
+  text-decoration: underline;
+  background-color: transparent;
+  cursor: pointer;
+  color: inherit;
+  font-family: 'Sansation Regular';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.009;
 `;
 
 export const ContactsBox = styled.div`
