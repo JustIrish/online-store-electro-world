@@ -1,9 +1,45 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 
 import blenderbg from 'images/hero-img-bg.png';
 
 import { ReactComponent as SvgArrowR } from 'images/svg/arrow-slider-r.svg';
 import { ReactComponent as SvgArrowL } from 'images/svg/arrow-slider-l.svg';
+
+const translateIn = keyframes`
+0% {
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+`;
+
+const scaleIn = keyframes`
+0% {
+    -webkit-transform: translateY(-200px);
+    transform: translateY(-200px);
+    transform: scale(2);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+  38% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+    transform: scale(1);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+`;
 
 export const HeroSection = styled.section`
   position: relative;
@@ -81,6 +117,7 @@ export const Wrap = styled.div`
   position: relative;
   margin-left: 152px;
   margin-bottom: 288px;
+  animation: ${translateIn} 2500ms linear;
 `;
 
 export const ImageWrap = styled.div`
@@ -123,6 +160,8 @@ export const Mark = styled.div`
   font-size: 20px;
   font-weight: 400;
   color: ${({ theme: { colors } }) => colors.secondaryTxt};
+  animation: ${scaleIn} 2500ms linear;
+  animation-delay: 1000ms;
 
   &::before {
     content: '';
