@@ -13,6 +13,7 @@
 - Axios
 - Styled Components
 - React hook form
+- React-scroll
 - React-hot-toast for notifications
 
 ## Backend Repository [here](https://github.com/JustIrish/online-store-electro-world/tree/main/server).
