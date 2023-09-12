@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
+import { Element } from 'react-scroll';
+
+export const Section = styled(Element)`
   position: relative;
   z-index: 5;
   background-color: #fff;

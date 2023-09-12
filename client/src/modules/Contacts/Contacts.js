@@ -51,7 +51,7 @@ const Contacts = () => {
   };
 
   return (
-    <Section>
+    <Section name="contact">
       <Container>
         <FlexWrap>
           <FormWrap>

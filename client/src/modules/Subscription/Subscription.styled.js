@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
-export const Section = styled.section`
+import { Element } from 'react-scroll';
+
+export const Section = styled(Element)`
   padding: 47px 0px 49px;
   background-color: ${({ theme: { colors } }) => colors.bg};
 `;

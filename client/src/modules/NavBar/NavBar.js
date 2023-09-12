@@ -6,7 +6,7 @@ import Logo from 'shared/components/Logo/Logo';
 import {
   NavSlyled,
   MenuList,
-  Link,
+  StyledLink,
   Contacts,
   ContactsText,
   Bag,
@@ -26,7 +26,9 @@ const NavBar = () => {
           {' '}
           {items.map(({ id, text, link }) => (
             <li key={id}>
-              <Link href={link}>{text}</Link>
+              <StyledLink to={link} smooth={true} duration={500}>
+                {text}
+              </StyledLink>
             </li>
           ))}
         </MenuList>

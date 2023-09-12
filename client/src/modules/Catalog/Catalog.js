@@ -5,7 +5,7 @@ import { Section, Text, BgText, FlexBox, LinkMore } from './Catalog.styled';
 
 const Catalog = ({ array = [] }) => {
   return (
-    <Section>
+    <Section name="catalog">
       <SectionTitle title={'Каталог товарiв'} />
       <BgText>Всi товари</BgText>
       <Text>

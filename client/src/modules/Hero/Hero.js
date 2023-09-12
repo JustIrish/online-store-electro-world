@@ -26,7 +26,7 @@ import {
 
 const Hero = () => {
   return (
-    <HeroSection>
+    <HeroSection name="hero">
       <BoxCircle>
         <BoxCircleSecond>
           <Container>

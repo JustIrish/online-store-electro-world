@@ -1,5 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 
+import { Element } from 'react-scroll';
+
 import blenderbg from 'images/hero-img-bg.png';
 
 import { ReactComponent as SvgArrowR } from 'images/svg/arrow-slider-r.svg';
@@ -41,7 +43,7 @@ const scaleIn = keyframes`
   }
 `;
 
-export const HeroSection = styled.section`
+export const HeroSection = styled(Element)`
   position: relative;
   padding: 238px 0px 68px;
   background-color: ${({ theme: { colors } }) => colors.bg};

@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Link } from 'react-scroll';
+
 import { ReactComponent as SvgUser } from 'images/svg/user.svg';
 import { ReactComponent as SvgBag } from 'images/svg/bag.svg';
 
@@ -15,7 +17,7 @@ export const MenuList = styled.ul`
   gap: 40px;
 `;
 
-export const Link = styled.a`
+export const StyledLink = styled(Link)`
   position: relative;
   color: inherit;
   font-size: 20px;
