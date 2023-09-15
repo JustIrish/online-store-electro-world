@@ -39,7 +39,9 @@ export const ItemTitle = styled.p`
   font-size: 22px;
 `;
 
-export const Card = styled.li``;
+export const Card = styled.li`
+  cursor: pointer;
+`;
 
 export const ImageWrap = styled.div`
   position: relative;

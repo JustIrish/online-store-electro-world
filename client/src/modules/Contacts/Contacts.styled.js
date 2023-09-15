@@ -2,11 +2,11 @@ import styled from 'styled-components';
 
 import { Element } from 'react-scroll';
 
-export const Section = styled(Element)`
+export const Section = styled.section`
   background-color: ${({ theme: { colors } }) => colors.secondaryBg};
 `;
 
-export const FlexWrap = styled.div`
+export const FlexWrap = styled(Element)`
   position: relative;
   display: flex;
   align-items: flex-start;

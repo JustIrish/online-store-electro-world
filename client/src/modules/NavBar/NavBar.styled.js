@@ -19,6 +19,7 @@ export const MenuList = styled.ul`
 
 export const StyledLink = styled(Link)`
   position: relative;
+  cursor: pointer;
   color: inherit;
   font-size: 20px;
   transition: color 300ms cubic-bezier(0.165, 0.84, 0.44, 1);

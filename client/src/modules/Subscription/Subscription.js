@@ -9,9 +9,9 @@ import { Section, FlexWrap, TitleWrap, Text } from './Subscription.styled';
 
 const Subscription = () => {
   return (
-    <Section name="new">
+    <Section>
       <Container>
-        <FlexWrap>
+        <FlexWrap name="new">
           <TitleWrap>
             <SectionTitle
               title={

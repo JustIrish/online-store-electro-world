@@ -51,9 +51,9 @@ const Contacts = () => {
   };
 
   return (
-    <Section name="contact">
+    <Section>
       <Container>
-        <FlexWrap>
+        <FlexWrap name="contact">
           <FormWrap>
             <FormTitle>Запит пропозицій</FormTitle>
             <ContactsForm />
@@ -91,8 +91,12 @@ const Contacts = () => {
                 <li>
                   <InfoTitle>Завжди бути в курсi:</InfoTitle>
                   <SocialWrap>
-                    <Social href="https://www.facebook.com/">Facebook</Social>
-                    <Social href="https://www.instagram.com/">Instagram</Social>
+                    <Social href="https://www.facebook.com/" target="_blank">
+                      Facebook
+                    </Social>
+                    <Social href="https://www.instagram.com/" target="_blank">
+                      Instagram
+                    </Social>
                   </SocialWrap>
                 </li>
                 <li>

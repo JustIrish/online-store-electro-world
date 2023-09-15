@@ -26,8 +26,8 @@ import {
 
 const Hero = () => {
   return (
-    <HeroSection name="hero">
-      <BoxCircle>
+    <HeroSection>
+      <BoxCircle name="hero">
         <BoxCircleSecond>
           <Container>
             <ImageWrap>
@@ -65,8 +65,12 @@ const Hero = () => {
 
             <FlexWrap>
               {' '}
-              <Social href="https://www.facebook.com/">Facebook</Social>
-              <Social href="https://www.instagram.com/">Instagram</Social>
+              <Social href="https://www.facebook.com/" target="_blank">
+                Facebook
+              </Social>
+              <Social href="https://www.instagram.com/" target="_blank">
+                Instagram
+              </Social>
             </FlexWrap>
           </Container>
         </BoxCircleSecond>

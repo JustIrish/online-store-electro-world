@@ -43,7 +43,7 @@ const scaleIn = keyframes`
   }
 `;
 
-export const HeroSection = styled(Element)`
+export const HeroSection = styled.section`
   position: relative;
   padding: 238px 0px 68px;
   background-color: ${({ theme: { colors } }) => colors.bg};
@@ -67,7 +67,7 @@ export const HeroSection = styled(Element)`
   }
 `;
 
-export const BoxCircle = styled.div`
+export const BoxCircle = styled(Element)`
   width: 100%;
   height: 100%;
 

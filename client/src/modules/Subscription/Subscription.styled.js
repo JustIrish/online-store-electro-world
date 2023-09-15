@@ -2,12 +2,12 @@ import styled from 'styled-components';
 
 import { Element } from 'react-scroll';
 
-export const Section = styled(Element)`
+export const Section = styled.section`
   padding: 47px 0px 49px;
   background-color: ${({ theme: { colors } }) => colors.bg};
 `;
 
-export const FlexWrap = styled.div`
+export const FlexWrap = styled(Element)`
   display: flex;
   align-items: center;
   gap: 70px;

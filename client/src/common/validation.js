@@ -10,7 +10,7 @@ export const validationRules = {
       message: 'Name must contain no more than 20 characters',
     },
     pattern: {
-      value: /^(?=[a-z0-9])[a-z0-9\s]{2,20}[a-z0-9]$/i,
+      value: /^(?=[a-z])[a-z\s]{2,20}[a-z]$/i,
       message: 'Invalid input',
     },
   },
